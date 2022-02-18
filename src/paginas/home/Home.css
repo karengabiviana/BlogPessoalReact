@@ -1,13 +1,23 @@
-.titulo
+.caixa
 {
-    color: #00008B;
-    text-align: center;
+    background-color: #6495ED;
+    
 }
 
-.img
+.titulo
 {
-    width: 749px;
-    height: 352px;
-    display: block;
-    margin: 0 auto;
+   color: #f3e4cb !important;
+   font-weight: bold !important;
+}
+
+.botao
+{
+    border-color: #F5DEB3 !important;
+    background-color: #3F51B5;
+    color: #F5DEB3 !important;
+}
+
+.postagem
+{
+    background-color: #F5DEB3;
 }
