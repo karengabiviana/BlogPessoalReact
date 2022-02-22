@@ -7,6 +7,8 @@ import CadastroUsuario from './paginas/cadastroUsuario/CadastroUsuario';
 import Home from './paginas/home/Home';
 import { Grid } from '@material-ui/core';
 import './App.css';
+import ListaTema from './components/temas/listaTema/ListaTema';
+import ListaPostagem from './components/postagens/listaPostagem/ListaPostagem';
 
 function App() {
   return (
@@ -25,6 +27,12 @@ function App() {
           </Route>
           <Route path="/cadastrousuario">
               <CadastroUsuario />
+          </Route>
+          <Route path="/temas">
+              < ListaTema/>
+          </Route>
+          <Route path="/postagens">
+              < ListaPostagem/>
           </Route>
         </div>
       </Switch>

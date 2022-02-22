@@ -1,6 +1,7 @@
 import React from 'react';
 import {Typography, Box, Grid, Button} from '@material-ui/core';
 import './Home.css';
+import TabPostagem from '../../components/postagens/tabPostagem/TabPostagem';
 
 function Home() {
     return (
@@ -21,6 +22,7 @@ function Home() {
                     <img src="https://arteeartistas.com.br/wp-content/uploads/2018/09/Noite-Estrelada.-Vincent-van-Gogh.jpg" alt="Quadro 'Noite Estrelada' de Van Gogh" width="600px" height="282px"  />
                 </Grid>
                 <Grid xs={12} className= "postagem" >
+                    <TabPostagem />
                 </Grid>
             </Grid> 
         </>
