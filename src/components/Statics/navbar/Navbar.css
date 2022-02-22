@@ -1,7 +1,8 @@
 .cursor
 {
     cursor: pointer;
-    color: "#fffff";
+    color: #fff;
+    text-decoration: none;
     
 }
 
