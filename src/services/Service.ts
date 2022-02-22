@@ -3,7 +3,7 @@ import { url } from "inspector";
 
 export const api = axios.create(
     {
-        baseURL: "https://caostech.herokuapp.com/"
+        baseURL: "https://caostech.herokuapp.com"
     })
 
 export const cadastroUsuario = async (url:any, dados:any, setDado:any) => {
