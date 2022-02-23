@@ -1,6 +1,6 @@
 import React from "react";
 import { AppBar, Toolbar, Typography, Box } from "@material-ui/core";
-import { Link } from "react-router-dom";  
+import { Link } from "react-router-dom";
 import "./Navbar.css";
 import "../../../paginas/home/Home";
 
@@ -14,40 +14,46 @@ function Navbar() {
                             Blog Pessoal
                         </Typography>
                     </Box>
-                        <Box display="flex" justifyContent="start">
-                            <Link to="/home" className="cursor">
-                                <Box mx={1} >
-                                    <Typography variant="h6" color="inherit">
-                                        Home
-                                    </Typography>    
-                                </Box>
+                    <Box display="flex" justifyContent="start">
+                        <Link to="/home" className="cursor">
+                            <Box mx={1} >
+                                <Typography variant="h6" color="inherit">
+                                    Home
+                                </Typography>
+                            </Box>
+                        </Link>
+                        <Box mx={1} className="cursor">
+                            <Link to="/postagens" className="cursor">
+                                <Typography variant="h6" color="inherit">
+                                    Postagens
+                                </Typography>
                             </Link>
-                        <Box mx={1} className="cursor">
-                            <Typography variant="h6" color="inherit">
-                                Postagens
-                            </Typography>
                         </Box>
-                        <Box mx={1} className="cursor">
+                    
+                    <Box mx={1} className="cursor">
+                        <Link to="/temas" className="cursor">
                             <Typography variant="h6" color="inherit">
                                 Temas
                             </Typography>
-                        </Box>
+                        </Link>
                         
-                        <Box mx={1} className="cursor">
+                    </Box>
+
+                    <Box mx={1} className="cursor">
+                        <Typography variant="h6" color="inherit">
+                            Cadastrar Tema
+                        </Typography>
+                    </Box>
+                    <Link to="/login" className="cursor">
+                        <Box mx={1} >
                             <Typography variant="h6" color="inherit">
-                                Cadastrar Tema
+                                LogOut
                             </Typography>
                         </Box>
-                        <Link to="/login" className="cursor">
-                            <Box mx={1} >
-                                <Typography variant="h6" color="inherit">
-                                    LogOut
-                                </Typography>
-                            </Box>
-                        </Link>  
-                    </Box>
-                </Toolbar>
-            </AppBar>
+                    </Link>
+                </Box>
+            </Toolbar>
+        </AppBar>
         </>
     )
 }
