@@ -1,10 +1,21 @@
 import React from "react";
+import useLocalStorage from "react-use-localstorage";
 import { AppBar, Toolbar, Typography, Box } from "@material-ui/core";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import "./Navbar.css";
 import "../../../paginas/home/Home";
 
 function Navbar() {
+    //capturar o token - isso mesmo , como se o token fosse um pokemon 
+    const [token, setToken] = useLocalStorage('token')
+    let history = useHistory();
+    //mas se a pessoa usuária usar o goLogout vai soltar o pokemon na natureza
+    function goLogout() {
+        setToken('');//vamos zerar o token
+        alert("O login do usuário foi desconectado") // mensagem para a pessoa usuária 
+        history.push('/login') //redireciona para página de login
+    }
+
     return (
         <>
             <AppBar position="static">
@@ -29,31 +40,32 @@ function Navbar() {
                                 </Typography>
                             </Link>
                         </Box>
-                    
-                    <Box mx={1} className="cursor">
-                        <Link to="/temas" className="cursor">
-                            <Typography variant="h6" color="inherit">
-                                Temas
-                            </Typography>
-                        </Link>
-                        
-                    </Box>
 
-                    <Box mx={1} className="cursor">
-                        <Typography variant="h6" color="inherit">
-                            Cadastrar Tema
-                        </Typography>
-                    </Box>
-                    <Link to="/login" className="cursor">
-                        <Box mx={1} >
+                        <Box mx={1} className="cursor">
+                            <Link to="temas" className="cursor">
+                                <Typography variant="h6" color="inherit">
+                                    Temas
+                                </Typography>
+                            </Link>
+
+                        </Box>
+
+                        <Box mx={1} className="cursor">
+                            <Link to='/post/temas' className="cursor">
+                                <Typography variant="h6" color="inherit">
+                                    Cadastrar Tema
+                                </Typography>
+                            </Link>
+                        </Box>
+
+                        <Box mx={1} className="cursor" onClick={goLogout}>
                             <Typography variant="h6" color="inherit">
                                 LogOut
                             </Typography>
                         </Box>
-                    </Link>
-                </Box>
-            </Toolbar>
-        </AppBar>
+                    </Box>
+                </Toolbar>
+            </AppBar>
         </>
     )
 }
