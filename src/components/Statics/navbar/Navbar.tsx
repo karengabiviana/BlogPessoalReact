@@ -42,7 +42,7 @@ function Navbar() {
                         </Box>
 
                         <Box mx={1} className="cursor">
-                            <Link to="temas" className="cursor">
+                            <Link to="/tema" className="cursor">
                                 <Typography variant="h6" color="inherit">
                                     Temas
                                 </Typography>
@@ -51,7 +51,7 @@ function Navbar() {
                         </Box>
 
                         <Box mx={1} className="cursor">
-                            <Link to='/post/temas' className="cursor">
+                            <Link to='/formularioTema' className="cursor">
                                 <Typography variant="h6" color="inherit">
                                     Cadastrar Tema
                                 </Typography>

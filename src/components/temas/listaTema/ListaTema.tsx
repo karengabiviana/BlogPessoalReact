@@ -21,7 +21,7 @@ function ListaTema() {
 
     async function getTema() //função assíncrona
     { //aguardando o método busca(from service)
-        await busca("/temas", setTemas, { headers: { 'Authorization': token } }) //3 parâmetros: (url, setDado, header)
+        await busca("/tema", setTemas, { headers: { 'Authorization': token } }) //3 parâmetros: (url, setDado, header)
     }
     //chamar o getTema usuando o useEffetc -> efeito colateral
     useEffect(() => { getTema() }, [temas.length]) //sempre que o tamanho do tema for alterado a função getTema será ativada
@@ -43,14 +43,14 @@ function ListaTema() {
                         <CardActions>
                             <Box display="flex" justifyContent="center" mb={1.5} >
 
-                                <Link to={`/put/temas/${tema.id}`} className="text-decorator-none">
+                                <Link to={`/tema/${tema.id}`} className="text-decorator-none">
                                     <Box mx={1}>
                                         <Button variant="contained" className="marginLeft" size='small' color="primary" >
                                             atualizar
                                         </Button>
                                     </Box>
                                 </Link>
-                                <Link to={`/delete/temas/${tema.id}`} className="text-decorator-none">
+                                <Link to={`/tema/${tema.id}`} className="text-decorator-none">
                                     <Box mx={1}>
                                         <Button variant="contained" size='small' color="secondary">
                                             deletar

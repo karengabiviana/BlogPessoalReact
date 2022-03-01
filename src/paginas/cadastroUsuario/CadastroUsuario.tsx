@@ -29,7 +29,7 @@ function CadastroUsuario()
 //useEffect é usado como efeito colateral de alguma ação.
 //O efeito do cadastro completo, tendo o id != 0, é ser direcionados para a tela Login
     useEffect(() => { 
-        if (userResult.id !== 0) {
+        if (userResult.id != 0) {
             history.push("/login")
         }
     }, [userResult])

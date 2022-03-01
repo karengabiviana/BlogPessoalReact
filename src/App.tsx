@@ -37,7 +37,7 @@ function App() {
             <CadastroUsuario />
           </Route>
 
-          <Route path="/get/temas">
+          <Route path="/temas">
             < ListaTema />
           </Route>
 
@@ -52,10 +52,10 @@ function App() {
             <CadastroPostagem />
           </Route>
 
-          <Route exact path='/temas'>
+          <Route exact path='/formularioTema'>
             <CadastroTema />
           </Route>
-          <Route exact path='/temas/:id'>
+          <Route exact path='/formularioTema/:id'>
             <CadastroTema />
           </Route>
 

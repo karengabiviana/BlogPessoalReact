@@ -42,9 +42,9 @@ function CadastroTema() {
         })
     }
 
-    async function onSubmit(e: ChangeEvent<HTMLInputElement>) {
+    async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
         e.preventDefault()//previnir que a tela seja atualizada -> ferindo conceito de SPA
-        console.log("tema" + JSON.stringify(tema))
+        console.log("temas" + JSON.stringify(tema))//mostrar no console
 
         if (id !== undefined) // se o id estiver preenchido, tema será atualizado
         {

@@ -9,13 +9,13 @@ import "./Login.css";
 function Login()
 {
     let history = useHistory();
-    const [token, setToken]=useLocalStorage('token');
+    const [token, setToken] = useLocalStorage('token');
     const [userLogin, setUserLogin] = useState<UserLogin>(
         {
             id: 0,
-            usuario:"",
-            senha:"",
-            token:""
+            usuario:'',
+            senha:'',
+            token:''
         })
 
         function updatedModel(e: ChangeEvent<HTMLInputElement>) 
@@ -28,9 +28,9 @@ function Login()
     
 
     useEffect(()=>{
-        if( token != "")
+        if( token != '')
         {
-            history.push("/home")
+            history.push('/home')
         }
     } ,[token])    
 
@@ -41,11 +41,11 @@ function Login()
         {
             await login(`/usuarios/logar`, userLogin, setToken)
 
-            alert("Usuário logado com sucesso!");
+            alert("Login efetuado com sucesso!");
         }
         catch(error)
         {
-            alert("Dados do usuário inconsistentes. Falha ao logar!");
+            alert("Dados inconsistentes. Falha ao logar!");
         }
     }
 
@@ -66,7 +66,7 @@ function Login()
                             <Typography variant="subtitle1" gutterBottom align="center" 
                              >Ainda não tem uma conta?</Typography>
                         </Box>
-                        <Link to="/cadastrousuario" > 
+                        <Link to="/usuarios/cadastrar" > 
                             <Typography variant="subtitle1" gutterBottom align="center" className="texto1">Cadastre-se</Typography>
                         </Link>
                     </Box>
