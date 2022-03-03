@@ -28,10 +28,10 @@ function CadastroTema() {
         if (id !== undefined) {
             findById(id)
         }
-    })
+    }, [id])
 
     async function findById(id: string) {
-        buscaId(`/temas/${id}`, setTema, { Headers: { 'Authorization': token } }
+        await buscaId(`/temas/${id}`, setTema, { headers: { 'Authorization': token } }
         )
     }
 
@@ -64,7 +64,7 @@ function CadastroTema() {
         history.push('/temas')
     }
 
-    return (
+    return(
         <Container maxWidth="sm" className="topo">
             <form onSubmit={onSubmit}>
                 <Typography variant="h3" color="textSecondary" component="h1" align="center" >

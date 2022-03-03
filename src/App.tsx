@@ -45,10 +45,10 @@ function App() {
             < ListaPostagem />
           </Route>
 
-          <Route exact path='/post/postagens'>
+          <Route exact path='/formularioPostagens'>
             <CadastroPostagem />
           </Route>
-          <Route exact path='/post/postagens/:id'>
+          <Route exact path='/formularioPostagens/:id'>
             <CadastroPostagem />
           </Route>
 
@@ -59,10 +59,10 @@ function App() {
             <CadastroTema />
           </Route>
 
-          <Route exact path='delete/postagens/:id'>
+          <Route exact path='/deletarPost/:id'>
             <DeletarPostagem />
           </Route>
-          <Route exact path='delete/temas/:id'>
+          <Route exact path='/deletarTemas/:id'>
             <DeletarTema />
           </Route>
 
