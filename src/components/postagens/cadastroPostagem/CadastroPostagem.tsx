@@ -49,7 +49,7 @@ function CadastroPostagem()
         getTemas()//mudança aciona a function getTemas
         if (id !== undefined) // se o id estiver preenchido
         {
-            findByIdPostagem(id)// achei a Postagem
+            findByIdPostagem(id)// acha a Postagem
         }
     }, [id])//monitora o id da postagem
 
@@ -74,6 +74,8 @@ function CadastroPostagem()
 
     async function onSubmit(e:ChangeEvent<HTMLFormElement>) 
     {
+        e.preventDefault()
+
         if(id !== undefined)//se o id estiver preenchido
         {
             put(`/postagens`, postagem, setPostagem, // atualiza a postagem

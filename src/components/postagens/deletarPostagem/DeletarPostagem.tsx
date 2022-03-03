@@ -37,7 +37,7 @@ function DeletarPostagem()
     function sim()
     {
         history.push('/postagens')
-        deleteId(`/postagens/&{id}`, {headers:{'Authorization': token }});
+        deleteId(`/postagens/${id}`, {headers:{'Authorization': token }});
         alert('Postagem deletada com sucesso');
     }
 

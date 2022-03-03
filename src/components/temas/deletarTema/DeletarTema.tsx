@@ -33,8 +33,8 @@ function DeletarTema() {
 
     function sim()// opção sim pra o botão
     {
-        history.push('/temas/')//a pessoa vai ser redirecionada ao temas
-        deleteId(`/temas/&{id}`, { headers: {'Authorization': token }});
+        history.push('/temas')//a pessoa vai ser redirecionada ao temas
+        deleteId(`/temas/${id}`, { headers: {'Authorization': token } } );
         alert('Tema deletado com sucesso!')
     }
 
@@ -43,7 +43,7 @@ function DeletarTema() {
         history.push('/temas')//a pessoa vai ser redirecionada ao temas
     }
 
-    return (
+    return(
         <>
             <Box m={2}>
                 <Card variant="outlined">
