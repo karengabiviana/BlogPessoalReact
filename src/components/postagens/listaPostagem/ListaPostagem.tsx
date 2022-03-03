@@ -31,7 +31,7 @@ function ListaPostagem() {
             {
                 posts.map(post=>( //mapear cada postagem
                 <Box m={2}>
-                    <Card variant="outlined">
+                    <Card variant="outlined">   
                         <CardContent>
                             <Typography color="textSecondary" >
                                 Postagens

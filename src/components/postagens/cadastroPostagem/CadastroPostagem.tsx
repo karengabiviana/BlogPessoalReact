@@ -11,7 +11,7 @@ function CadastroPostagem()
 {
     let history= useHistory();
     const {id} = useParams<{id: string}>();
-    const [temas, setTemas] = useState<Tema[]>([]) //Plural:armazenar todos os temas já cadastrados na api
+    const [temas, setTemas] = useState<Tema[]>([]) //Plural:armazena todos os temas já cadastrados na api
     const [token, setToken] = useLocalStorage('token');
     
     useEffect(() => {
@@ -28,7 +28,7 @@ function CadastroPostagem()
             descricao:''
         })
 
-    const [postagem, setPostagem] = useState<Postagem>(//cadastro das postagens
+    const [postagem, setPostagem] = useState<Postagem>(//é o cadastro das postagens
         {
             id: 0,
             titulo: '',
@@ -109,7 +109,7 @@ function CadastroPostagem()
                     <InputLabel id="demo-simple-select-helper-label">Tema</InputLabel>
                     {/* lista suspensa com as opções de tema */}
                     <Select labelId="demo-simple-select-helper-label" id="demo-simple-select-helper"
-                    onChange={(e) => buscaId(`/tema/${e.target.value}`, setTema,{headers:{'Authorization': token}})}>
+                    onChange={(e) => buscaId(`/temas/${e.target.value}`, setTema,{headers:{'Authorization': token}})}>
                     {
                         // opções de temas para escolha vão ser listadas
                         temas.map(tema => (
