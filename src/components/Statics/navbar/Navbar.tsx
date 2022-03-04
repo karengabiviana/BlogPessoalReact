@@ -4,6 +4,7 @@ import { Link, useHistory } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { TokenState } from "../../../store/tokens/TokensReducer";
 import { addToken } from "../../../store/tokens/Actions";
+import { toast } from "react-toastify";
 import "./Navbar.css";
 import "../../../paginas/home/Home";
 
@@ -16,8 +17,19 @@ function Navbar() {
     const dispatch = useDispatch();
 
     function goLogout() {
-        dispatch(addToken(''));//vamos zerar o token
-        alert("O login do usuário foi desconectado") // mensagem para a pessoa usuária 
+        dispatch(addToken(''));
+        toast.info('O login do usuário foi desconectado',// mensagem para a pessoa usuária 
+        {
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick:true,
+        pauseOnHover: false,
+        draggable: false,
+        theme: "colored",
+        progress: undefined
+        });
+
         history.push('/login') //redireciona para página de login
     }
 

@@ -1,9 +1,10 @@
 import React, { useState, useEffect, ChangeEvent} from "react";
 import User from "../../models/User";
 import { cadastroUsuario } from "../../services/Service";
-import "./CadastroUsuario.css";
 import { Grid, Typography, TextField, Box, Button } from "@material-ui/core";
 import { Link, useHistory } from "react-router-dom";
+import { toast } from "react-toastify";
+import "./CadastroUsuario.css";
 
 function CadastroUsuario()
 {
@@ -54,9 +55,29 @@ function CadastroUsuario()
         //garantir que a senha seja igual ao confimar senha && senha tenha 8 ou mais caracteres
         if(confirmarSenha == user.senha && user.senha.length >= 8 ){
         cadastroUsuario('/usuarios/cadastrar', user, setUserResult)
-        alert('Usuario cadastrado com sucesso')
+        toast.success('Usuario cadastrado com sucesso',// mensagem para a pessoa usuária 
+            {
+            position: "top-right",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick:true,
+            pauseOnHover: false,
+            draggable: false,
+            theme: "colored",
+            progress: undefined
+            });
         }else{
-            alert('Dados inconsistentes. Favor verificar as informações de cadastro.')
+            toast.error('Dados inconsistentes. Favor verificar as informações de cadastro.',// mensagem para a pessoa usuária 
+            {
+            position: "top-right",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick:true,
+            pauseOnHover: false,
+            draggable: false,
+            theme: "colored",
+            progress: undefined
+            });
         }
     }
     

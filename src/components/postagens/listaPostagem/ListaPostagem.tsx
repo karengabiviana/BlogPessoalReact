@@ -4,6 +4,7 @@ import { Box, Card, CardActions, CardContent, Button, Typography } from "@materi
 import { busca } from "../../../services/Service";
 import { useSelector } from "react-redux";
 import { TokenState } from "../../../store/tokens/TokensReducer";
+import { toast } from "react-toastify";
 import Postagem from "../../../models/Postagem";
 import "./ListaPostagem.css";
 
@@ -18,7 +19,17 @@ function ListaPostagem() {
     useEffect(() => { //Efeito colateral
         if (token == '')//Se Postagem não existir== token vazio ->
         {
-            alert("Você precisa estar com login ativo")//Vai aparecer esse aviso para a pessoa usuária
+            toast.error('É necessário efetuar o login para essa ação!',// mensagem para a pessoa usuária 
+            {
+            position: "top-right",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick:true,
+            pauseOnHover: false,
+            draggable: false,
+            theme: "colored",
+            progress: undefined
+            });
             history.push("/login")// pessoa usuária será redirecionade ao login 
         }
     }, [token])

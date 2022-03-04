@@ -4,6 +4,7 @@ import { Button, Container, TextField, Typography } from "@material-ui/core";
 import { buscaId, post, put } from "../../../services/Service";
 import { useSelector } from "react-redux";
 import { TokenState } from "../../../store/tokens/TokensReducer";
+import { toast } from "react-toastify";
 import Tema from "../../../models/Tema";
 import './CadastroTema.css';
 
@@ -23,7 +24,17 @@ function CadastroTema() {
     useEffect(() => {
         if (token == "")//Se o token estiver vazio
         {
-            alert("É necessário efetuar o login para essa ação!")
+            toast.error('É necessário efetuar o login para essa ação!',// mensagem para a pessoa usuária 
+            {
+            position: "top-right",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick:true,
+            pauseOnHover: false,
+            draggable: false,
+            theme: "colored",
+            progress: undefined
+            });
             history.push("/login")// a pessoa usuária vai ser redirecionada ao Login
         }
     }, [token])
@@ -53,12 +64,33 @@ function CadastroTema() {
         if (id !== undefined) // se o id estiver preenchido, tema será atualizado
         {
             put(`/temas`, tema, setTema, {headers: { 'Authorization': token }})
-            alert("Tema atualizado com sucesso!");
+            toast.success('Tema atualizado com sucesso!',// mensagem para a pessoa usuária 
+            {
+            position: "top-right",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick:true,
+            pauseOnHover: false,
+            draggable: false,
+            theme: "colored",
+            progress: undefined
+            });
+            history.push("/login")
         }
         else // caso contrário, se o id estiver vazio, tema será criado
         {
             post(`/temas`, tema, setTema, {headers: { 'Authorization': token }})
-            alert("Tema cadastrado com sucesso!");
+            toast.success('Tema cadastrado com sucesso!',// mensagem para a pessoa usuária 
+            {
+            position: "top-right",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick:true,
+            pauseOnHover: false,
+            draggable: false,
+            theme: "colored",
+            progress: undefined
+            });
         }
         back()
     }

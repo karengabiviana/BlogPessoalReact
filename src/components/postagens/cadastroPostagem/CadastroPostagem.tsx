@@ -4,6 +4,7 @@ import { useHistory, useParams } from "react-router-dom";
 import { busca, buscaId, post, put } from "../../../services/Service";
 import { useSelector } from "react-redux";
 import { TokenState } from "../../../store/tokens/TokensReducer";
+import { toast } from 'react-toastify'
 import Postagem from "../../../models/Postagem";
 import Tema from "../../../models/Tema";
 import './CadastroPostagem.css';
@@ -20,8 +21,19 @@ function CadastroPostagem()
     useEffect(() => {
         if(token ==="")
         {
-            alert("É necessário efetuar o login para essa ação!")
-            history.push("/login")
+            toast.error('É necessário efetuar o login para essa ação!',// mensagem para a pessoa usuária 
+            {
+            position: "top-right",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick:true,
+            pauseOnHover: false,
+            draggable: false,
+            theme: "colored",
+            progress: undefined
+            });
+           
+            history.push("/login") // a pessoa usuária vai ser redirecionada ao Login
         }
     }, [token])
 
@@ -83,13 +95,33 @@ function CadastroPostagem()
         {
             put(`/postagens`, postagem, setPostagem, // atualiza a postagem
             {headers:{'Authorization': token }}) //requirido autenticação
-            alert("Postagem atualizada com sucesso!")
+            toast.success('Postagem atualizada com sucesso!',// mensagem para a pessoa usuária 
+            {
+            position: "top-right",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick:true,
+            pauseOnHover: false,
+            draggable: false,
+            theme: "colored",
+            progress: undefined
+            });
         } 
         else//caso não
         {
             post(`/postagens`, postagem, setPostagem, // cadastra nova postagem
             {headers:{'Authorization': token }}) //requirido autenticação
-            alert("Postagem cadastrada com sucesso!")
+            toast.success('Postagem cadastrada com sucesso!',// mensagem para a pessoa usuária 
+            {
+            position: "top-right",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick:true,
+            pauseOnHover: false,
+            draggable: false,
+            theme: "colored",
+            progress: undefined
+            });
         }
         back()   
     }
@@ -116,7 +148,7 @@ function CadastroPostagem()
                     {
                         // opções de temas para escolha vão ser listadas
                         temas.map(tema => (
-                            <MenuItem value={tema.id}>{tema.descricao}</MenuItem>
+                            <MenuItem id={"Tema" + tema.id} value={tema.id}>{tema.descricao}</MenuItem>
                         ))
                     }
                     </Select>

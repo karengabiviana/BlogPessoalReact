@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Grid } from '@material-ui/core';
 import { Provider } from 'react-redux';
+import { ToastContainer } from 'react-toastify';
 import Navbar from './components/Statics/navbar/Navbar';
 import Footer from './components/Statics/footer/Footer';
 import Login from './paginas/login/Login';
@@ -14,11 +15,13 @@ import CadastroTema from './components/temas/cadastroTema/CadastroTema';
 import DeletarPostagem from './components/postagens/deletarPostagem/DeletarPostagem';
 import DeletarTema from './components/temas/deletarTema/DeletarTema';
 import store from './store/store';
+import 'react-toastify/dist/ReactToastify.css';
 import './App.css';
 
 function App() {
   return (
     <Provider store={store}>
+      <ToastContainer/>
       <Router>
         <Navbar />
         <Switch>

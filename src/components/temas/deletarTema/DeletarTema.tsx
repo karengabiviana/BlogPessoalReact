@@ -4,6 +4,7 @@ import { useHistory, useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { TokenState } from "../../../store/tokens/TokensReducer";
 import { buscaId, deleteId, } from "../../../services/Service";
+import { toast } from "react-toastify";
 import Tema from "../../../models/Tema";
 import './DeletarTema.css';
 
@@ -19,7 +20,17 @@ function DeletarTema() {
     useEffect(() => {
         if (token == "")//Se o token estiver vazio
         {
-            alert("É necessário efetuar o login para essa ação!")
+            toast.error('É necessário efetuar o login para essa ação!',// mensagem para a pessoa usuária 
+            {
+            position: "top-right",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick:true,
+            pauseOnHover: false,
+            draggable: false,
+            theme: "colored",
+            progress: undefined
+            });
             history.push("/login")// a pessoa usuária vai ser redirecionada ao Login
         }
     }, [token])
@@ -39,7 +50,17 @@ function DeletarTema() {
     {
         history.push('/temas')//a pessoa vai ser redirecionada ao temas
         deleteId(`/temas/${id}`, { headers: {'Authorization': token } } );
-        alert('Tema deletado com sucesso!')
+        toast.success('Tema deletado com sucesso!',// mensagem para a pessoa usuária 
+        {
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick:true,
+        pauseOnHover: false,
+        draggable: false,
+        theme: "colored",
+        progress: undefined
+        });
     }
 
     function nao()// opção não pra o botão

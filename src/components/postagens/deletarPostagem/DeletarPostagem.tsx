@@ -5,6 +5,7 @@ import { useState } from "react";
 import { buscaId, deleteId } from "../../../services/Service";
 import { useSelector } from "react-redux";
 import { TokenState } from "../../../store/tokens/TokensReducer";
+import { toast } from "react-toastify";
 import Postagem from "../../../models/Postagem";
 import './DeletarPostagem.css';
 
@@ -21,7 +22,17 @@ function DeletarPostagem()
     useEffect(() => {
         if(token =="")
         {
-            alert("É necessário efetuar o login para essa ação!")
+            toast.error('É necessário efetuar o login para essa ação!',// mensagem para a pessoa usuária 
+            {
+            position: "top-right",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick:true,
+            pauseOnHover: false,
+            draggable: false,
+            theme: "colored",
+            progress: undefined
+            });
             history.push("/login")
         }
     }, [token])
@@ -42,7 +53,17 @@ function DeletarPostagem()
     {
         history.push('/postagens')
         deleteId(`/postagens/${id}`, {headers:{'Authorization': token }});
-        alert('Postagem deletada com sucesso');
+        toast.success('Postagem deletada com sucesso',// mensagem para a pessoa usuária 
+            {
+            position: "top-right",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick:true,
+            pauseOnHover: false,
+            draggable: false,
+            theme: "colored",
+            progress: undefined
+            });
     }
 
     function nao()

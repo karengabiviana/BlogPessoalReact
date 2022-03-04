@@ -4,6 +4,7 @@ import { Link, useHistory } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { login } from "../../services/Service";
 import { addToken } from "../../store/tokens/Actions";
+import { toast } from "react-toastify";
 import UserLogin from "../../models/UserLogin";
 import "./Login.css";
 
@@ -46,11 +47,31 @@ function Login()
         {
             await login(`/usuarios/logar`, userLogin, setToken)
 
-            alert("Login efetuado com sucesso!");
+            toast.success('Login efetuado com sucesso!',// mensagem para a pessoa usuária 
+            {
+            position: "top-right",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick:true,
+            pauseOnHover: false,
+            draggable: false,
+            theme: "colored",
+            progress: undefined
+            });
         }
         catch(error)
         {
-            alert("Dados inconsistentes. Falha ao logar!");
+            toast.error('Dados inconsistentes. Falha ao logar!',// mensagem para a pessoa usuária 
+            {
+            position: "top-right",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick:true,
+            pauseOnHover: false,
+            draggable: false,
+            theme: "colored",
+            progress: undefined
+            });
         }
     }
 

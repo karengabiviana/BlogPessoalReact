@@ -3,6 +3,7 @@ import { Typography, Box, Grid, Button } from '@material-ui/core';
 import { Link, useHistory } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { TokenState } from '../../store/tokens/TokensReducer';
+import { toast } from 'react-toastify';
 import TabPostagem from '../../components/postagens/tabPostagem/TabPostagem';
 import ModalPostagem from '../../components/postagens/modalPostagem/ModalPostagem';
 import './Home.css';
@@ -18,7 +19,17 @@ function Home() {
     useEffect(() => {
         if (token == "")//Se o token estiver vazio
         {
-            alert("É necessário efetuar o login para essa ação!")
+            toast.error('É necessário efetuar o login para essa ação!',// mensagem para a pessoa usuária 
+            {
+            position: "top-right",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick:true,
+            pauseOnHover: false,
+            draggable: false,
+            theme: "colored",
+            progress: undefined
+            });
             history.push("/login")// a pessoa usuária vai ser redirecionada ao Login
         }
     }, [token])
