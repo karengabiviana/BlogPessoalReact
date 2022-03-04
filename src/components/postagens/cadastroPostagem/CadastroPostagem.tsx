@@ -2,18 +2,21 @@ import React, { useState, useEffect, ChangeEvent } from "react";
 import { Button, Container, FormControl, FormHelperText, InputLabel, MenuItem, Select, TextField, Typography } from "@material-ui/core";
 import { useHistory, useParams } from "react-router-dom";
 import { busca, buscaId, post, put } from "../../../services/Service";
-import useLocalStorage from "react-use-localstorage";
+import { useSelector } from "react-redux";
+import { TokenState } from "../../../store/tokens/TokensReducer";
 import Postagem from "../../../models/Postagem";
 import Tema from "../../../models/Tema";
 import './CadastroPostagem.css';
+
 
 function CadastroPostagem()
 {
     let history= useHistory();
     const {id} = useParams<{id: string}>();
     const [temas, setTemas] = useState<Tema[]>([]) //Plural:armazena todos os temas já cadastrados na api
-    const [token, setToken] = useLocalStorage('token');
-    
+    const token = useSelector<TokenState, TokenState["tokens"]>(
+        (state) => state.tokens
+    );
     useEffect(() => {
         if(token ==="")
         {

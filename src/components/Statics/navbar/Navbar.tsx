@@ -1,24 +1,32 @@
 import React from "react";
-import useLocalStorage from "react-use-localstorage";
 import { AppBar, Toolbar, Typography, Box } from "@material-ui/core";
 import { Link, useHistory } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { TokenState } from "../../../store/tokens/TokensReducer";
+import { addToken } from "../../../store/tokens/Actions";
 import "./Navbar.css";
 import "../../../paginas/home/Home";
 
 function Navbar() {
     //capturar o token - isso mesmo , como se o token fosse um pokemon 
-    const [token, setToken] = useLocalStorage('token')
+    const token = useSelector<TokenState, TokenState["tokens"]>(
+        (state) => state.tokens
+    );
     let history = useHistory();
-    //mas se a pessoa usuária usar o goLogout vai soltar o pokemon na natureza
+    const dispatch = useDispatch();
+
     function goLogout() {
-        setToken('');//vamos zerar o token
+        dispatch(addToken(''));//vamos zerar o token
         alert("O login do usuário foi desconectado") // mensagem para a pessoa usuária 
         history.push('/login') //redireciona para página de login
     }
 
-    return (
-        <>
-            <AppBar position="static">
+    var navbarComponent;
+
+    if(token!=="")
+    {
+        navbarComponent =
+        <AppBar position="static">
                 <Toolbar variant="dense">
                     <Box className="cursor" >
                         <Typography variant="h5" color="inherit">
@@ -66,6 +74,11 @@ function Navbar() {
                     </Box>
                 </Toolbar>
             </AppBar>
+    }
+
+    return (
+        <>
+            {navbarComponent}
         </>
     )
 }
