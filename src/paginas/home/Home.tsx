@@ -6,6 +6,7 @@ import { TokenState } from '../../store/tokens/TokensReducer';
 import { toast } from 'react-toastify';
 import TabPostagem from '../../components/postagens/tabPostagem/TabPostagem';
 import ModalPostagem from '../../components/postagens/modalPostagem/ModalPostagem';
+import '../../../src/Style Global.css';
 import './Home.css';
 
 
@@ -37,10 +38,10 @@ function Home() {
 
     return (
         <>
-            <Grid container direction="row" justifyContent="center" alignItems="center" className='caixa'>
+            <Grid container direction="row" justifyContent="center" alignItems="center" className='backgroundDark'>
                 <Grid alignItems="center" item xs={6}>
                     <Box paddingX={20} >
-                        <Typography variant="h3" gutterBottom color="textPrimary" component="h3" align="center" className='titulo' >Seja bem vinde!</Typography>
+                        <Typography variant="h3" gutterBottom component="h3" align="center" className='primary' >Seja bem vinde!</Typography>
                         <Typography variant="h5" gutterBottom color="textPrimary" component="h5" align="center" className='titulo' >Testando o Teste ;D</Typography>
                     </Box>
                     <Box display="flex" justifyContent="center">
@@ -52,10 +53,9 @@ function Home() {
                         </Link>
                     </Box>
                 </Grid>
-                <Grid item xs={6} >
-                    <img src="https://arteeartistas.com.br/wp-content/uploads/2018/09/Noite-Estrelada.-Vincent-van-Gogh.jpg" alt="Quadro 'Noite Estrelada' de Van Gogh" width="600px" height="282px" />
+                <Grid item xs={6} className="imageHome" >
                 </Grid>
-                <Grid xs={12} className="postagem" >
+                <Grid xs={12} >
                     <TabPostagem />
                 </Grid>
             </Grid>

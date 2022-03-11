@@ -10,7 +10,7 @@ import "./ListaPostagem.css";
 
 
 function ListaPostagem() {
-    const [posts, setTemas] = useState<Postagem[]>([])
+    const [posts, setPosts] = useState<Postagem[]>([])
     let history = useHistory();
     const token = useSelector<TokenState, TokenState["tokens"]>(
         (state) => state.tokens
@@ -36,7 +36,7 @@ function ListaPostagem() {
 
     async function getPost() //função assíncrona
     { //aguardando o método busca(from service)
-        await busca("/postagens", setTemas, { headers: { 'Authorization': token } }) //3 parâmetros: (url, setDado, header)
+        await busca("/postagens", setPosts, { headers: { 'Authorization': token } }) //3 parâmetros: (url, setDado, header)
     }
     //chamar o getTema usuando o useEffetc -> efeito colateral
     useEffect(() => { getPost() }, [posts.length]) //sempre que o tamanho do tema for alterado a função getTema será ativada

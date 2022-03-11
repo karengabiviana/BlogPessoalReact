@@ -10,7 +10,7 @@
 
 .imagem
 {
-    background-image: url(https://s.ebiografia.com/img/an/oi/a_noite_estrelada.jpg);
+    background-image: url(/src/assets/images/tv_analogica_chuvisco.gif);
     background-repeat:no-repeat;
     width: 100vh;
     min-height:100vh;

@@ -5,7 +5,8 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import {Typography, Box, Grid } from '@material-ui/core';
 import { useSelector } from "react-redux";
 import { TokenState } from "../../../store/tokens/TokensReducer";
-import "./Footer.css"
+import "./Footer.css";
+import '../../../Style Global.css';
 
 function Footer()
 {
@@ -18,8 +19,8 @@ function Footer()
     if(token!=="")
     {
         footerComponent=
-        <Grid container direction="row" justifyContent="center" alignItems="center">
-                <Grid alignItems="center" item xs={12}>
+        <Grid container direction="row" justifyContent="center" alignItems="center" >
+                <Grid alignItems="center" item xs={12} className="primaryBackground">
                     <Box className="box1">
                         <Box paddingTop={1} display="flex" alignItems="center" justifyContent="center">
                             <Typography variant="h5" align="center" gutterBottom className="texto">Siga-nos nas redes sociais </Typography>

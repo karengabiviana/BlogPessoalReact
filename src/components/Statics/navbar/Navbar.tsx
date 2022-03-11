@@ -6,6 +6,7 @@ import { TokenState } from "../../../store/tokens/TokensReducer";
 import { addToken } from "../../../store/tokens/Actions";
 import { toast } from "react-toastify";
 import "./Navbar.css";
+import '../../../Style Global.css';
 import "../../../paginas/home/Home";
 
 function Navbar() {
@@ -38,11 +39,11 @@ function Navbar() {
     if(token!=="")
     {
         navbarComponent =
-        <AppBar position="static">
+        <AppBar position="static" className="backgroundDark">
                 <Toolbar variant="dense">
                     <Box className="cursor" >
-                        <Typography variant="h5" color="inherit">
-                            Blog Pessoal
+                        <Typography variant="h3" className="cursor">
+                            Caos Tech
                         </Typography>
                     </Box>
                     <Box display="flex" justifyContent="start">

@@ -10,11 +10,11 @@
    font-weight: bold !important;
 }
 
-.botao
+ .botao
 {
     border-color: #F5DEB3 !important;
     background-color: #3F51B5;
-    color: #F5DEB3 !important;
+    color: #F5DEB3 !important; 
 }
 
 .postagem
@@ -25,4 +25,14 @@
 .text-decorator-none
 {
     text-decoration: none;
+}
+
+.imageHome
+{
+    background-image: url(https://i.giphy.com/media/xT0GqkbKlg3wuaETVS/giphy.webp);
+    background-repeat:no-repeat;
+    width: 80vh;
+    min-height:65vh;
+    background-size:cover;
+    background-position:center;
 }

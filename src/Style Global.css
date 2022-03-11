@@ -1,0 +1,98 @@
+/* Cores */
+
+.backgroundDark
+{
+    background-color: #2d2d2d !important;
+}
+
+.backgroundLight
+{
+    background-color: #eeee;
+}
+
+.primaryBackground
+{
+    background-color: #43F4FF !important;
+}
+.secondaryBackground
+{
+    background-color: #FF33F7 !important;
+}
+
+.primaryColor
+{
+    color: #43F4FF !important;
+}
+.secondaryColor
+{
+    color: #FF33F7;
+}
+.tertiaryColor
+{
+    color: #B8FF43;
+}
+
+/* Fontes */
+@font-face 
+{
+    font-family: Hacked;
+    src: url(https://hackedfont.com/HACKED.ttf);
+}
+
+h1
+{
+    font-family: Hacked !important;
+    font-size: 69px;
+}
+h2
+{
+    font-family: Hacked !important;
+    font-size: 57.5px;
+}
+h3
+{
+    font-family: Hacked !important;
+    font-size: 48px;
+}
+h4
+{
+    font-family: Hacked !important;
+    font-size: 40px;
+}
+h5
+{
+    font-family: Hacked !important;
+    font-size: 32px;
+}
+h6
+{
+    font-family: Hacked !important;
+    font-size: 25.5px;
+}
+
+body1
+{
+    font-family: Consolas,monaco,monospace !important;
+    font-size: 20.5px;
+}
+body2
+{
+    font-family: Consolas,monaco,monospace !important;
+    font-size: 16.5px;
+}
+body3
+{
+    font-family: Consolas,monaco,monospace !important;
+    font-size: 13px;
+}
+
+/* Campos de texto arredondados */
+.textfieldRadius
+{
+    border-radius: 8px;
+}
+.noBreakLines
+{
+    display: inline-block !important;
+    white-space: nowrap;
+}
