@@ -7,7 +7,7 @@ import { addToken } from "../../../store/tokens/Actions";
 import { toast } from "react-toastify";
 import "./Navbar.css";
 import '../../../Style Global.css';
-import "../../../paginas/home/Home";
+import "../../../pages/home/Home";
 
 function Navbar() {
     //capturar o token - isso mesmo , como se o token fosse um pokemon 
