@@ -5,7 +5,7 @@ import { Provider } from 'react-redux';
 import { ToastContainer } from 'react-toastify';
 import Navbar from './components/Statics/navbar/Navbar';
 import Footer from './components/Statics/footer/Footer';
-import Login from './pages/login/Login';
+import Login from './pages/login/Loginn';
 import CadastroUsuario from './pages/cadastroUsuario/CadastroUsuario';
 import Home from './pages/home/Home';
 import ListaTema from './components/temas/listaTema/ListaTema';
