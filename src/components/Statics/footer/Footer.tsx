@@ -1,50 +1,39 @@
 import React from "react";
-// import InstagramIcon from '@material-ui/icons/Instagram';
-import FacebookIcon from '@material-ui/icons/Facebook';
-import LinkedInIcon from '@material-ui/icons/LinkedIn';
-import {Typography, Box, Grid } from '@material-ui/core';
+import { Typography, Box, Grid } from '@material-ui/core';
 import { useSelector } from "react-redux";
 import { TokenState } from "../../../store/tokens/TokensReducer";
 import "./Footer.css";
 import '../../../Style Global.css';
 
-function Footer()
-{
+function Footer() {
     const token = useSelector<TokenState, TokenState["tokens"]>(
         (state) => state.tokens
     );
 
     var footerComponent;
 
-    if(token!=="")
-    {
-        footerComponent=
-        <Grid container direction="row" justifyContent="center" alignItems="center" >
-                <Grid alignItems="center" item xs={12} className="primaryBackground">
-                    <Box className="box1">
-                        <Box paddingTop={1} display="flex" alignItems="center" justifyContent="center">
-                            <Typography variant="h5" align="center" gutterBottom className="texto">Siga-nos nas redes sociais </Typography>
+    if (token !== "") {
+        footerComponent =
+            <Grid container direction="row" justifyContent="center" alignItems="center" className="backgroundDark">
+                <Grid alignItems="center" item xs={12}  >
+                    <Box display="flex" flexDirection="row" justifyContent="space-between" alignItems="center" className="box1 backgroundDark">
+                        <Box marginLeft={4}>
+                                <a target="_blank" href="https://brasil.generation.org">
+                                    <Typography variant="subtitle2" align="center" gutterBottom className="texto" >©2022 Copyright:</Typography>
+                                    <Typography variant="subtitle2" gutterBottom className="texto" align="center">brasil.generation.org</Typography>
+                                </a>
                         </Box>
-                        {/* <Box display="flex" alignItems="center" justifyContent="center">
-                            <a href="https://www.facebook.com/generationbrasil" target="_blank">
-                                <FacebookIcon className="redes" />
-                            </a>
-                             <a href="https://www.instagram.com/generationbrasil/" target="_blank">
-                                <InstagramIcon className="redes" /> */}
-                            {/* </a> 
-                            <a href="https://www.linkedin.com/school/generationbrasil/" target="_blank">
-                                <LinkedInIcon className="redes" />
-                            </a>
-                        </Box> */}
-                    </Box>
-                    <Box className="box2">
-                        <Box paddingTop={1}> 
-                            <Typography variant="subtitle2" align="center" gutterBottom className="texto" >© 2020 Copyright:</Typography>
-                        </Box>
-                        <Box>
-                            <a target="_blank" href="https://brasil.generation.org">
-                                <Typography variant="subtitle2" gutterBottom className="texto" align="center">brasil.generation.org</Typography>
-                            </a>
+                        <Box marginRight={3} display="flex">
+                            <Box padding={1}>
+                                <a target="_blank" href="https://github.com/karengabiviana">
+                                    <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="ícone do GitHub" className="iconFooter" />
+                                </a>
+                            </Box>
+                            <Box padding={1}>
+                                <a target="_blank" href="https://www.linkedin.com/in/karen-gabrieli-viana/">
+                                    <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="ícone do LinkedIn" className="iconFooter" />
+                                </a>
+                            </Box>
                         </Box>
                     </Box>
                 </Grid>
@@ -52,7 +41,7 @@ function Footer()
 
     }
 
-    return(
+    return (
         <>
             {footerComponent}
         </>

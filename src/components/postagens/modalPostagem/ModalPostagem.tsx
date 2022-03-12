@@ -1,9 +1,11 @@
 import React from 'react'
 import { makeStyles, Theme, createStyles } from '@material-ui/core/styles';
-import Modal from '@material-ui/core/Modal';
 import {Button,Box } from "@material-ui/core";
-import './ModalPostagem';
+import Modal from '@material-ui/core/Modal';
 import CadastroPostagem from "../cadastroPostagem/CadastroPostagem";
+import './ModalPostagem';
+import '../../../Style Global.css';
+
 
 // Responsável por centralizar o modal
 function getModalStyle()
@@ -55,7 +57,7 @@ function ModalPostagem()
 
     return(
         <div>
-            <Button variant="outlined" className="btnModal" onClick={handleOpen}>
+            <Button variant="outlined" className="bottonPrimary" onClick={handleOpen}>
                 Nova Postagem
             </Button>
             {/* Rederização do Body */}

@@ -81,7 +81,7 @@ function Login() {
                         <TextField value={userLogin.senha} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id="senha" label="Senha" variant="outlined" name="senha" margin="normal" type="password" className="backgroundLight textfieldRadius" fullWidth />
                         
                         <Box marginTop={2} textAlign="center" >
-                            <Button type="submit" variant="contained" className="primaryBackground" >Logar</Button>
+                            <Button type="submit" variant="outlined" className="bottonPrimary" >Logar</Button>
                         </Box>
                     </form>
                     <Box display="flex" justifyContent="flex-end" marginTop={2} >

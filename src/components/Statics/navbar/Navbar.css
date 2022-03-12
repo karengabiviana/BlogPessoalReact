@@ -2,11 +2,16 @@
 {
     cursor: pointer;
     color: #fff;
-    text-decoration: none;
-    
+    text-decoration: none; 
 }
-
 .text-decorator-none
 {
     text-decoration: none;
+}
+
+.bar
+{
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
 }

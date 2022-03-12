@@ -1,5 +1,4 @@
-/* Cores */
-
+/* Backgrounds Colors */
 .backgroundDark
 {
     background-color: #2d2d2d !important;
@@ -19,6 +18,7 @@
     background-color: #FF33F7 !important;
 }
 
+/* Colors */
 .primaryColor
 {
     color: #43F4FF !important;
@@ -29,7 +29,11 @@
 }
 .tertiaryColor
 {
-    color: #B8FF43;
+    color: #B8FF43 !important;
+}
+.lightColor
+{
+    color: #eeee;
 }
 
 /* Fontes */
@@ -89,10 +93,31 @@ body3
 /* Campos de texto arredondados */
 .textfieldRadius
 {
-    border-radius: 8px;
+    border-radius: 8px !important;
 }
 .noBreakLines
 {
     display: inline-block !important;
     white-space: nowrap;
+}
+/* Botton */
+.bottonPrimary
+{
+    border: 2px solid #43F4FF !important;
+  color: #43F4FF !important;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 8px !important;
+  text-decoration: none;
+}
+.bottonSecondary
+{
+    border: 2px solid #FF33F7 !important;
+  color: #FF33F7 !important;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 8px !important;
+  text-decoration: none;
 }

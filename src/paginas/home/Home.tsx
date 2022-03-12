@@ -41,15 +41,15 @@ function Home() {
             <Grid container direction="row" justifyContent="center" alignItems="center" className='backgroundDark'>
                 <Grid alignItems="center" item xs={6}>
                     <Box paddingX={20} >
-                        <Typography variant="h3" gutterBottom component="h3" align="center" className='primary' >Seja bem vinde!</Typography>
-                        <Typography variant="h5" gutterBottom color="textPrimary" component="h5" align="center" className='titulo' >Testando o Teste ;D</Typography>
+                        <Typography variant="h3" gutterBottom component="h3" align="right" className='secondaryColor' >Seja bem vinde</Typography>
+                        <Typography variant="h4" gutterBottom component="h4" align="right" className='tertiaryColor' >Ao Caos</Typography>
                     </Box>
                     <Box display="flex" justifyContent="center">
-                        <Box marginRight={1}>
+                        <Box marginRight={1} >
                             <ModalPostagem />
                         </Box>
                         <Link to="/postagens" className='text-decorator-none'>
-                            <Button variant="outlined" className='botao'>Ver Postagens</Button>
+                            <Button variant="outlined"className='bottonSecondary' >Ver Postagens</Button>
                         </Link>
                     </Box>
                 </Grid>

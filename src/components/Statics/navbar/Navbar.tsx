@@ -40,20 +40,19 @@ function Navbar() {
     {
         navbarComponent =
         <AppBar position="static" className="backgroundDark">
-                <Toolbar variant="dense">
-                    <Box className="cursor" >
-                        <Typography variant="h3" className="cursor">
-                            Caos Tech
-                        </Typography>
-                    </Box>
+                <Toolbar variant="dense" className="bar" >
+                    <Link to="/home" className="cursor">
+                        <Box display="flex" className="cursor" >
+                            <Typography variant="h3" className="cursor primaryColor">
+                                Caos 
+                            </Typography>
+                            <Typography variant="h3" className="secondaryColor">
+                                Tech
+                            </Typography>
+                        </Box>
+                    </Link>
                     <Box display="flex" justifyContent="start">
-                        <Link to="/home" className="cursor">
-                            <Box mx={1} >
-                                <Typography variant="h6" color="inherit">
-                                    Home
-                                </Typography>
-                            </Box>
-                        </Link>
+                        
                         <Box mx={1} className="cursor">
                             <Link to="/postagens" className="cursor">
                                 <Typography variant="h6" color="inherit">
@@ -71,7 +70,7 @@ function Navbar() {
 
                         </Box>
 
-                        <Box mx={1} className="cursor">
+                        <Box mx={1} className="cursor lightColor">
                             <Link to='/formularioTema' className="cursor">
                                 <Typography variant="h6" color="inherit">
                                     Cadastrar Tema
@@ -79,7 +78,7 @@ function Navbar() {
                             </Link>
                         </Box>
 
-                        <Box mx={1} className="cursor" onClick={goLogout}>
+                        <Box mx={1} className="cursor tertiaryColor" onClick={goLogout}>
                             <Typography variant="h6" color="inherit">
                                 LogOut
                             </Typography>
