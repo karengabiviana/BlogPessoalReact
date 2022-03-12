@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Button, createStyles, makeStyles, Modal, Theme } from "@material-ui/core";
-import CloseIcon from '@material-ui/icons/Close';
+// import CloseIcon from '@material-ui/icons/Close';
 import './ModalPostagem.css';
 import CadastroPostagem from "../cadastroPostagem/CadastroPostagem";
 
@@ -49,7 +49,7 @@ function ModalPostagem()
     const body= (
         <div style={modalStyle} className={classes.paper}>
             <Box display="flex" justifyContent="flex-end" className="cursor">
-                <CloseIcon onClick={handleClose} /> {/* ícone para fechamento */}
+                {/* <CloseIcon onClick={handleClose} /> ícone para fechamento */}
             </Box>
             <CadastroPostagem /> {/* Importação do arquivo CadastroPostagem para dentro do corpo construido aqui */}
         </div>
