@@ -1,7 +1,9 @@
-import React from "react";
-import { Box, Button, createStyles, makeStyles, Modal, Theme } from "@material-ui/core";
+import React from 'react'
+import { makeStyles, Theme, createStyles } from '@material-ui/core/styles';
+import Modal from '@material-ui/core/Modal';
+import {Button,Box } from "@material-ui/core";
 // import CloseIcon from '@material-ui/icons/Close';
-import './ModalPostagem.css';
+import './ModalPostagem';
 import CadastroPostagem from "../cadastroPostagem/CadastroPostagem";
 
 // Responsável por centralizar o modal
@@ -46,10 +48,10 @@ function ModalPostagem()
     };
 
     // conteúdo do pop-up
-    const body= (
+    const body = (
         <div style={modalStyle} className={classes.paper}>
             <Box display="flex" justifyContent="flex-end" className="cursor">
-                {/* <CloseIcon onClick={handleClose} /> ícone para fechamento */}
+                 {/*<CloseIcon onClick={handleClose} /> ícone para fechamento */}
             </Box>
             <CadastroPostagem /> {/* Importação do arquivo CadastroPostagem para dentro do corpo construido aqui */}
         </div>
