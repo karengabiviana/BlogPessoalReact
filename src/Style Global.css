@@ -1,108 +1,90 @@
 /* Backgrounds Colors */
-.backgroundDark
-{
+.backgroundDark{
     background-color: #2d2d2d !important;
 }
-
-.backgroundLight
-{
+.backgroundLight{
     background-color: #eeee;
 }
-
-.primaryBackground
-{
+.primaryBackground{
     background-color: #43F4FF !important;
 }
-.secondaryBackground
-{
+.secondaryBackground{
     background-color: #FF33F7 !important;
 }
 
 /* Colors */
-.primaryColor
-{
+.primaryColor{
     color: #43F4FF !important;
 }
-.secondaryColor
-{
+.secondaryColor{
     color: #FF33F7;
 }
-.tertiaryColor
-{
+.tertiaryColor{
     color: #B8FF43 !important;
 }
-.lightColor
-{
+.lightColor{
     color: #eeee;
 }
 
 /* Fontes */
-@font-face 
-{
+@font-face {
     font-family: Hacked;
     src: url(https://hackedfont.com/HACKED.ttf);
 }
-
-h1
-{
+h1{
     font-family: Hacked !important;
     font-size: 69px;
 }
-h2
-{
+h2{
     font-family: Hacked !important;
     font-size: 57.5px;
 }
-h3
-{
+h3{
     font-family: Hacked !important;
     font-size: 48px;
 }
-h4
-{
+h4{
     font-family: Hacked !important;
     font-size: 40px;
 }
-h5
-{
+h5{
     font-family: Hacked !important;
     font-size: 32px;
 }
-h6
-{
+h6{
     font-family: Hacked !important;
     font-size: 25.5px;
 }
-
-body1
-{
+body1{
     font-family: Consolas,monaco,monospace !important;
     font-size: 20.5px;
 }
-body2
-{
+body2{
     font-family: Consolas,monaco,monospace !important;
     font-size: 16.5px;
 }
-body3
-{
+body3{
     font-family: Consolas,monaco,monospace !important;
     font-size: 13px;
 }
 
 /* Campos de texto arredondados */
-.textfieldRadius
-{
+.textfieldRadius{
     border-radius: 8px !important;
 }
-.noBreakLines
-{
+
+/* Quebra de texto */
+.noBreakLines{
     display: inline-block !important;
     white-space: nowrap;
 }
+.breakLines{
+    inline-size: auto;
+    text-align: justify;
+}
+
 /* Botton */
-.bottonPrimary
-{
+.bottonPrimary{
     border: 2px solid #43F4FF !important;
   color: #43F4FF !important;
   padding: 14px 28px;
@@ -111,8 +93,7 @@ body3
   border-radius: 8px !important;
   text-decoration: none;
 }
-.bottonSecondary
-{
+.bottonSecondary{
     border: 2px solid #FF33F7 !important;
   color: #FF33F7 !important;
   padding: 14px 28px;
@@ -120,4 +101,24 @@ body3
   cursor: pointer;
   border-radius: 8px !important;
   text-decoration: none;
+}
+
+/* PostCard */
+.cardPrimary{
+    border: 2px solid #43F4FF !important;
+  color: #eeee !important;
+  background-color: #2d2d2d !important;
+  padding: 14px 28px;
+  border-radius: 8px !important;
+  text-decoration: none;
+  width: 40vh;
+}
+.tabPrimary{
+    border: 2px solid #43F4FF !important;
+  color: #eeee !important;
+  background-color: #2d2d2d !important;
+  border-radius: 8px !important;
+  text-decoration: none;
+  width: 40vh;
+
 }
