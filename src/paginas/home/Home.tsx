@@ -21,16 +21,16 @@ function Home() {
         if (token == "")//Se o token estiver vazio
         {
             toast.error('É necessário efetuar o login para essa ação!',// mensagem para a pessoa usuária 
-            {
-            position: "top-right",
-            autoClose: 3000,
-            hideProgressBar: false,
-            closeOnClick:true,
-            pauseOnHover: false,
-            draggable: false,
-            theme: "colored",
-            progress: undefined
-            });
+                {
+                    position: "top-right",
+                    autoClose: 3000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: false,
+                    draggable: false,
+                    theme: "colored",
+                    progress: undefined
+                });
             history.push("/login")// a pessoa usuária vai ser redirecionada ao Login
         }
     }, [token])
@@ -41,15 +41,15 @@ function Home() {
             <Grid container direction="row" justifyContent="center" alignItems="center" className='backgroundDark'>
                 <Grid alignItems="center" item xs={6}>
                     <Box paddingX={20} >
-                        <Typography variant="h3" gutterBottom component="h3" align="right" className='secondaryColor' >Seja bem vinde</Typography>
-                        <Typography variant="h4" gutterBottom component="h4" align="right" className='tertiaryColor' >Ao Caos</Typography>
+                        <Typography variant="h3" gutterBottom component="h3" align="center"  >Seja bem vinde ao Caos</Typography>
+                        <Typography variant="body2" gutterBottom component="body" align="right" className='tertiaryColor' >Ao Caos</Typography>
                     </Box>
                     <Box display="flex" justifyContent="center">
-                        <Box marginRight={1} >
+                        <Box marginRight={1} > {/* botão de criação de postagem */}
                             <ModalPostagem />
                         </Box>
-                        <Link to="/postagens" className='text-decorator-none'>
-                            <Button variant="outlined"className='bottonSecondary' >Ver Postagens</Button>
+                        <Link to="/postagens" className='text-decorator-none'> {/* botão de ver de postagem */}
+                            <Button variant="outlined" className='bottonSecondary' >Ver Postagens</Button>
                         </Link>
                     </Box>
                 </Grid>
