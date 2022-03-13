@@ -134,16 +134,17 @@ function CadastroPostagem()
     return(
         <Container maxWidth="sm" className="topo">
             <form onSubmit={onSubmit}>
-                <Typography variant="h3" color="textSecondary" component="h1" align="center">
+                <Typography variant="h3" component="h4" align="center" className="primaryColor" >
                     Cadastro de Postagem
                 </Typography>
-                <TextField value={postagem.titulo} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)} id="titulo" label="titulo" variant="outlined" name="titulo" margin="normal" fullWidth />
-                <TextField value={postagem.texto} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)} id="texto" label="texto" variant="outlined" name="texto" margin="normal" fullWidth/>
-
+                <TextField value={postagem.titulo} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)} id="titulo" label="Título" variant="outlined" name="titulo" margin="normal"  className="backgroundLight textfieldRadius" fullWidth />
+                {/* <TextField value={postagem.imagem} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)} id="imagem" label="URL da Imagem" variant="outlined" name="imagem" margin="normal" className="backgroundLight textfieldRadius" placeholder="Insira uma URL de imagem aqui!">Imagem</TextField> */}
+                <TextField value={postagem.texto} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)} id="texto" label="Texto" variant="outlined" name="texto" margin="normal" className="backgroundLight textfieldRadius" multiline rows={8}  fullWidth/>
+                
                 <FormControl>
-                    <InputLabel id="demo-simple-select-helper-label">Tema</InputLabel>
+                    <InputLabel id="demo-simple-select-helper-label" className="tertiaryColor" >Tema</InputLabel>
                     {/* lista suspensa com as opções de tema */}
-                    <Select labelId="demo-simple-select-helper-label" id="demo-simple-select-helper"
+                    <Select labelId="demo-simple-select-helper-label" id="demo-simple-select-helper" 
                     onChange={(e) => buscaId(`/temas/${e.target.value}`, setTema,{headers:{'Authorization': token}})}>
                     {
                         // opções de temas para escolha vão ser listadas
@@ -155,7 +156,7 @@ function CadastroPostagem()
                     <FormHelperText>
                         Escolha um Tema para Postagem
                     </FormHelperText>
-                    <Button type="submit" variant="contained" color="primary">
+                    <Button type="submit" variant="outlined" className="bottonPrimary">
                         Finalizar
                     </Button>
                 </FormControl>

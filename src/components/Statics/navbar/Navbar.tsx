@@ -52,32 +52,6 @@ function Navbar() {
                         </Box>
                     </Link>
                     <Box display="flex" justifyContent="start">
-                        
-                        <Box mx={1} className="cursor">
-                            <Link to="/postagens" className="cursor">
-                                <Typography variant="h6" color="inherit">
-                                    Postagens
-                                </Typography>
-                            </Link>
-                        </Box>
-
-                        <Box mx={1} className="cursor">
-                            <Link to="/temas" className="cursor">
-                                <Typography variant="h6" color="inherit">
-                                    Temas
-                                </Typography>
-                            </Link>
-
-                        </Box>
-
-                        <Box mx={1} className="cursor lightColor">
-                            <Link to='/formularioTema' className="cursor">
-                                <Typography variant="h6" color="inherit">
-                                    Cadastrar Tema
-                                </Typography>
-                            </Link>
-                        </Box>
-
                         <Box mx={1} className="cursor tertiaryColor" onClick={goLogout}>
                             <Typography variant="h6" color="inherit">
                                 LogOut

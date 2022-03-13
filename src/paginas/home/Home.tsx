@@ -40,16 +40,20 @@ function Home() {
         <>
             <Grid container direction="row" justifyContent="center" alignItems="center" className='backgroundDark'>
                 <Grid alignItems="center" item xs={6}>
-                    <Box paddingX={20} >
-                        <Typography variant="h3" gutterBottom component="h3" align="center"  >Seja bem vinde ao Caos</Typography>
-                        <Typography variant="body2" gutterBottom component="body" align="right" className='tertiaryColor' >Ao Caos</Typography>
+                    <Box paddingX={15} >
+                        <Typography variant="h3" gutterBottom component="h3" align="center" className='tertiaryColor' >Seja bem vinde ao Caos</Typography>
                     </Box>
-                    <Box display="flex" justifyContent="center">
+                    <Box paddingX={12}>
+                        <Typography variant="body1"  component="body" align="center" > Estamos todos perdidos no caos tecnológico de muitos números 1 e 0   </Typography>
+                    </Box>
+                    <Box paddingTop={4} display="flex" justifyContent="center">
                         <Box marginRight={1} > {/* botão de criação de postagem */}
                             <ModalPostagem />
                         </Box>
-                        <Link to="/postagens" className='text-decorator-none'> {/* botão de ver de postagem */}
-                            <Button variant="outlined" className='bottonSecondary' >Ver Postagens</Button>
+                        <Link to="/formularioTema" className='text-decorator-none'> {/* botão de ver de postagem */}
+                            <Button variant="outlined" className='bottonSecondary' >
+                                 Novo Tema 
+                            </Button>
                         </Link>
                     </Box>
                 </Grid>

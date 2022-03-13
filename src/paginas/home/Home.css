@@ -1,34 +1,28 @@
-.caixa
-{
+.caixa{
     background-color: #6495ED;
     
 }
 
-.titulo
-{
+.titulo{
    color: #f3e4cb !important;
    font-weight: bold !important;
 }
 
- .botao
-{
+ .botao{
     border-color: #F5DEB3 !important;
     background-color: #3F51B5;
     color: #F5DEB3 !important; 
 }
 
-.postagem
-{
+.postagem{
     background-color: #F5DEB3;
 }
 
-.text-decorator-none
-{
+.text-decorator-none{
     text-decoration: none;
 }
 
-.imageHome
-{
+.imageHome{
     background-image: url(https://i.giphy.com/media/xT0GqkbKlg3wuaETVS/giphy.webp);
     background-repeat:no-repeat;
     min-height:60vh;

@@ -114,6 +114,16 @@ body3{
   block-size: auto;
   width: 100vh;
 }
+.cardTertiary{
+    border: 2px solid #B8FF43 !important;
+  color: #eeee !important;
+  background-color: #2d2d2d !important;
+  padding: 14px 28px;
+  border-radius: 8px !important;
+  text-decoration: none;
+  block-size: auto;
+  width: 50vh;
+}
 .tabPrimary{
     border: 2px solid #43F4FF !important;
   color: #eeee !important;

@@ -45,10 +45,10 @@ function ListaPostagem() {
         <>
             {
                 posts.map(post => ( //mapear cada postagem
-                    <Box display="flex" justifyContent="center" m={4} className="backgroundDark">
-                        <Card variant="outlined" className="bottonPrimary cardPrimary ">
+                    <Box display="flex" justifyContent="center" m={4} >
+                        <Card variant="outlined" className="cardPrimary">
                             <CardContent>
-                                <Typography variant="h5" className="primaryColor" align="center">
+                                <Typography variant="h4" className="primaryColor" align="center">
                                     {post.titulo} {/* Vai pegar a título da postagem */}
                                 </Typography>
                                 <Typography variant="body1" className="tertiaryColor " align="center">

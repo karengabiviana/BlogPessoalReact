@@ -6,6 +6,7 @@ import { useSelector } from "react-redux";
 import { TokenState } from "../../../store/tokens/TokensReducer";
 import { toast } from "react-toastify";
 import Tema from "../../../models/Tema";
+import '../../../Style Global.css';
 import "./ListaTema.css";
 
 function ListaTema() {
@@ -45,12 +46,9 @@ function ListaTema() {
             {
                 temas.map(tema=>( //mapear cada tema
                 <Box m={2}>
-                    <Card variant="outlined">
+                    <Card variant="outlined" className="cardTertiary">
                         <CardContent>
-                            <Typography color="textSecondary" >
-                                Tema
-                            </Typography>
-                            <Typography>
+                            <Typography variant="h4" align="center" className="tertiaryColor">
                                 {tema.descricao} {/* Vai pegar a descrição do temas */}
                             </Typography>
                         </CardContent>
@@ -59,14 +57,14 @@ function ListaTema() {
 
                                 <Link to={`/formularioTema/${tema.id}`} className="text-decorator-none">
                                     <Box mx={1}>
-                                        <Button variant="contained" className="marginLeft" size='small' color="primary" >
+                                        <Button variant="outlined" className="bottonPrimary" size='small' >
                                             atualizar
                                         </Button>
                                     </Box>
                                 </Link>
                                 <Link to={`/deletarTemas/${tema.id}`} className="text-decorator-none">
                                     <Box mx={1}>
-                                        <Button variant="contained" size='small' color="secondary">
+                                        <Button variant="outlined" className="bottonSecondary" size='small'>
                                             deletar
                                         </Button>
                                     </Box>

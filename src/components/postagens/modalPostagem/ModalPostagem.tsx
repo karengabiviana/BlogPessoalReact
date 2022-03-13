@@ -1,6 +1,6 @@
 import React from 'react'
 import { makeStyles, Theme, createStyles } from '@material-ui/core/styles';
-import {Button,Box } from "@material-ui/core";
+import {Button} from "@material-ui/core";
 import Modal from '@material-ui/core/Modal';
 import CadastroPostagem from "../cadastroPostagem/CadastroPostagem";
 import './ModalPostagem';
@@ -26,9 +26,9 @@ createStyles({
         paper: 
         {
             position: 'absolute',
-            width: 400,
-            backgroundColor: theme.palette.background.paper,
-            border: '2px solid #000',
+            width: 700,
+            backgroundColor: '#2d2d2d',
+            border: '2px solid #43F4FF',
             boxShadow: theme.shadows[5],
             padding: theme.spacing( 2, 4, 3),
         },
@@ -58,7 +58,7 @@ function ModalPostagem()
     return(
         <div>
             <Button variant="outlined" className="bottonPrimary" onClick={handleOpen}>
-                Nova Postagem
+                Novo Post
             </Button>
             {/* Rederização do Body */}
             <Modal open={open} onClose={handleClose} aria-labelledby="simple-modal-title" aria-describedby="simple-modal-description">
